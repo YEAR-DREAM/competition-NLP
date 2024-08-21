@@ -10,8 +10,8 @@ CUDA_VISIBLE_DEVICES="0,1,2,3" accelerate launch --config_file "configs/config.y
 --log_level "info" \
 --logging_strategy "steps" \
 --eval_strategy "epoch" \
---save_strategy "steps" \
---save_steps 8 \
+--save_strategy "epoch" \
+--save_steps 2000 \
 --hub_strategy "every_save" \
 --fp16 False \
 --fp16_opt_level "O1" \
